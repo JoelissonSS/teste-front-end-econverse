@@ -1,0 +1,5 @@
+@use '/src/styles/mixins';
+
+.header {
+  @include mixins.max-container-global;
+}

@@ -1,0 +1,33 @@
+@use "/src/styles/mixins" as m;
+.Partners{
+    display: flex;
+    gap: 13px;
+    @include m.max-container-global;
+    
+    margin-bottom: 90px;
+    .Partners_Banner{
+        flex: 1;
+        background-image: url('/Partners.png');
+        border-radius: 20px;
+        background-size: cover;
+        padding: 114px 0 40px  44px;
+        color: #FFFFFF;
+        h3{
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 60px;
+            margin-bottom: 8px;
+            
+        }
+        p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 32px;
+        }
+        button{
+            padding: 12px 26.51px;
+            border-radius: 6px;
+        }
+    }
+}

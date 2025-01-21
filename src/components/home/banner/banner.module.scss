@@ -1,0 +1,49 @@
+@use '/src/styles/variables.scss' as v;
+@use '/src/styles/mixins.scss' as m;
+.banner {
+  height: 390px;
+  background: url('/Banner.png') no-repeat;
+  background-size: cover;
+  padding-top: 78px;
+  position: relative;
+  z-index: -2;
+  .gradient {
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    margin-top: -78px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  div {
+    @include m.max-container-global;
+
+    h1 {
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 50px;
+      color: #ffffff;
+    }
+    p {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 36px; //valor menor do que esta  no figma pois  no figma está em colapso o titulo e o subtitulo
+      color: #ffffff;
+      margin-bottom: 41px;
+      span {
+        font-weight: 700;
+        color: v.$yellow-1;
+      }
+    }
+    button {
+      @include m.flex-center;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        height: 50px;
+        width: 206px;
+        border-radius: 5px;
+       }
+  }
+}

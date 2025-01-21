@@ -1,0 +1,218 @@
+@use '/src//styles//variables' as v;
+@use '/src//styles//mixins' as m;
+.showcase {
+  max-width: 1307px;
+  position: relative;
+  margin: 24px auto 0 auto;
+
+  .showcase__title {
+    @include m.flex-center;
+    gap: 34px;
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 700;
+    color: v.$blue;
+    max-width: 1166px;
+    margin: auto;
+    margin-top: 4px;
+    h2 {
+      min-width: fit-content;
+    }
+  }
+  .showcase__before {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    bottom: 222px;
+    left: -25px;
+    &:hover {
+      cursor: pointer;
+    }
+    z-index: 10;
+  }
+  .showcase__next {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    bottom: 222px;
+    right: -25px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .showcase__content {
+    @include m.flex-center;
+    gap: 18px;
+    justify-content: start;
+    max-width: 1340px;
+    padding: 0 19px;
+    overflow-x: scroll;
+    scrollbar-width: 0;
+    scrollbar-color: transparent transparent;
+    padding-bottom: 90px;
+    .showcase__content__items {
+      margin-top: 24px;
+      box-shadow: 0px 3px 19px 0px #00000038;
+
+      width: 304px;
+      height: 500px;
+      padding: 16px 13px;
+      img {
+        width: 278px;
+        height: 240px;
+        margin-top: 32px;
+        margin-bottom: 9px;
+      }
+      h3 {
+        font-size: 15px;
+        line-height: 22.5px;
+        font-weight: 300px;
+        color: #3f3f40;
+        margin-bottom: 12px;
+      }
+      .showcase__content__items__beforePrice {
+        color: #808080;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-decoration: line-through;
+        margin-bottom: 2px;
+      }
+      .showcase__content__items__price {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: #3f3f40;
+        margin-bottom: 2px;
+      }
+      .showcase__content__items__installments {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #3f3f40;
+        margin-bottom: 7px;
+      }
+      .showcase__content__items__freeShipping {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #3442b5;
+        margin-bottom: 12px;
+      }
+      .showcase__content__items__button {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+        width: 100%;
+        height: 44px;
+        border-radius: 4px;
+      }
+    }
+  }
+  .dialog{
+    width: 769px;
+    height: 299.26px;
+    border: none;
+    position: relative;
+  }
+  .showcase__modal {
+    padding: 45px 55px 10px 55px;
+    display: flex;
+    justify-items: center;
+    ::backdrop {
+      background-color: #00000005;
+    }
+    .modal__left {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > img {
+        width: 247px;
+        height: 192.2px;
+      }
+    }
+    .modal__right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h2 {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #3f3f40;
+        margin-bottom: 18px;
+      }
+      .modal__price {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+        color: #3f3f40;
+        margin-bottom: 32px;
+      }
+      .modal__desc {
+        font-family: 'Work Sans';
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 15.05px;
+        letter-spacing: 0.05em;
+        color: #9f9f9f;
+      }
+      .modal__more {
+        font-family: 'Work Sans';
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 11px;
+        letter-spacing: 0.05em;
+        color: #3442b5;
+        margin-bottom: 32px;
+      }
+      .modal__count {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 38px;
+        div {
+          width: 110px;
+          height: 36px;
+          border: solid #d9d9d9 1px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          > img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        button {
+          width: 188px;
+          height: 36px;
+          gap: 0px;
+
+          border-radius: 6px;
+          font-family: Poppins;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 21px;
+          text-align: center;
+          color: #271c47;
+        }
+        .modal__close {
+          display: block;
+            position: absolute;
+          background-color: #3442b5;
+          width: 300px;
+          img{
+            
+            top: 10px;
+            right: 30px;
+          }
+         
+        }
+      }
+    }
+  }
+}

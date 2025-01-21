@@ -1,0 +1,31 @@
+@use "/src/styles/variables" as v;
+@use "/src/styles/mixins" as m;
+
+.menuCategories{
+    @include m.flex-center;
+    @include m.max-container-global;
+    margin-top: 39px;
+    margin-bottom: 90px; 
+     gap: 42px;
+     .menuCategories__item{
+        @include m.flex-center;
+        flex-direction: column;
+        gap: 22px;
+        div {
+            @include m.flex-center;
+            background-color: #F4F4F4;
+            height: 120px;
+            width: 128px;
+            border-radius: 10px;
+            box-shadow: 0 4px 11px #00000021 ;
+        }
+        p{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &:first-child{
+            color: v.$blue-1;
+        }
+     }
+}

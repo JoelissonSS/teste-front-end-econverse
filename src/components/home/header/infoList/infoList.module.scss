@@ -1,0 +1,18 @@
+@use"/src/styles/variables" ;
+.infoList {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: variables.$gray-1;
+  padding: 6px 0;
+  .infoList__item {
+    display: flex;
+    gap: 9px;
+    .infoList__item__textHignlight{
+      color: #3019B2;
+    }
+  }
+}

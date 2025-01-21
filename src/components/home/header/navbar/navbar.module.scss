@@ -1,0 +1,25 @@
+@use"/src/styles/mixins";
+@use"/src/styles/variables";
+
+
+.navbar {
+    @include mixins.flex-center;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    a{
+        @include mixins.flex-center;
+        gap: 12px;
+        font-weight: 600;
+        line-height: 18px;
+        font-size: 12px;
+        color: variables.$gray-1;
+        text-transform: uppercase;
+        &:hover{
+            color: variables.$blue-1;
+        }
+        &:nth-child(6){
+            color: variables.$blue-1;
+        }
+    }
+    
+}

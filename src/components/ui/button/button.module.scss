@@ -1,0 +1,12 @@
+@use'/src/styles/variables' as v;
+
+
+
+.primary {
+    background-color: v.$yellow-1;
+    color: v.$purple-1;
+}
+.secondary{
+    background-color: v.$blue-2;
+    color: white;
+}

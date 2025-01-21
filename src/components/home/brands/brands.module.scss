@@ -1,0 +1,23 @@
+@use '/src/styles/variables' as v;
+@use '/src/styles/mixins' as m;
+
+.brands {
+  @include m.max-container-global;
+  margin-bottom: 90px;
+  h2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    color: v.$blue;
+    margin-bottom: 32px;
+  }
+  .brands__content {
+    display: flex;
+    gap: 42px;
+    img {
+      width: 211px;
+      height: 211px;
+    }
+  }
+}

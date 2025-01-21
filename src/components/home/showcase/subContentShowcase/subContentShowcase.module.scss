@@ -1,0 +1,30 @@
+@use '/src/styles/variables.scss' as v;
+@use '/src/styles/mixins.scss' as m;
+
+.subtitle {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22.5px;
+  text-align: center;
+  margin-top: -28px;
+}
+.menuProducts {
+  @include m.flex-center;
+  @include m.max-container-global;
+   margin-top: -20px;
+  list-style-type: none;
+  &:first-child {
+    color: #3442b5;
+  }
+  li {
+    @include m.flex-center;
+    flex: 1;
+    min-width: 214.17px;
+    height: 40px;
+    color: #3b3b3b;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    border: #BDBDBD 1px solid;
+  }
+}
